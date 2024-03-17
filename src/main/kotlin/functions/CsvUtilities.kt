@@ -25,7 +25,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createSinCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("sin.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/sin.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${sin(x)}")
                     val xWithPeriod = x + PI / 2;
@@ -43,7 +43,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createLog2Csv(xValues: List<Double>) {
         try {
-            PrintWriter(File("log2.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/log2.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${log2(x)}")
                 }
@@ -56,7 +56,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createLog3Csv(xValues: List<Double>) {
         try {
-            PrintWriter(File("log3.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/log3.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${log3(x)}")
                 }
@@ -68,7 +68,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createLog10Csv(xValues: List<Double>) {
         try {
-            PrintWriter(File("log10.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/log10.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${log10(x)}")
                 }
@@ -80,7 +80,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createLnCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("ln.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/ln.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${ln(x)}")
                 }
@@ -92,7 +92,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createCosCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("cos.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/cos.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${cos(x)}")
                     val xWithPeriod = x + PERIOD;
@@ -110,7 +110,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createTanCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("tan.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/tan.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${tan(x)}")
                     val xWithPeriod = x + PERIOD;
@@ -128,7 +128,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createCotCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("cot.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/cot.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${cot(x)}")
                     val xWithPeriod = x + PERIOD;
@@ -146,7 +146,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createSecCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("sec.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/sec.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${sec(x)}")
                     val xWithPeriod = x + PERIOD;
@@ -164,7 +164,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 
     fun createCscCsv(xValues: List<Double>) {
         try {
-            PrintWriter(File("csc.csv")).use { writer ->
+            PrintWriter(File("src/test/resources/csc.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${csc(x)}")
                     val xWithPeriod = x + PERIOD;
@@ -183,7 +183,7 @@ class Utilities(private val calculator: FunctionCalculator) {
 }
 
 fun main() {
-    val lst = listOf<Double>(
+    val lst = listOf(
         2.0,
         3.0,
         10.0,
@@ -230,7 +230,7 @@ fun main() {
     Utilities(FunctionCalculator()).createCscCsv(lst)
 
 
-    val lstLog = listOf<Double>(2.0, 3.0, 10.0, 1e-6, 0.02, 215.3380200004247)
+    val lstLog = listOf(2.0, 3.0, 10.0, 1e-6, 0.02, 215.3380200004247)
 
     Utilities(FunctionCalculator()).createLog10Csv(lstLog)
     Utilities(FunctionCalculator()).createLnCsv(lstLog)
