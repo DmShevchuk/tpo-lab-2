@@ -3,10 +3,9 @@ package integration
 import functions.BasicFunctions
 import functions.FunctionCalculator
 import integration.TestUtilities.Companion.assertBigDouble
-import org.junit.jupiter.api.*
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.ValueSource
-import kotlin.math.PI
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TestLayer3 {
@@ -18,26 +17,6 @@ class TestLayer3 {
     fun init() {
         calculator = FunctionCalculator()
         val basicFunctions = BasicFunctions();
-
-        val periodNum = 200
-
-        println(basicFunctions.sin(-1.9999999999995866))
-        println(basicFunctions.sin(0.0))
-        println(basicFunctions.sin(-1.571))
-        println(basicFunctions.sin(-3.763099999999999))
-        println(basicFunctions.sin(-1.9999999999995866 + PI / 2))
-        println(basicFunctions.sin(0.0 + PI / 2))
-        println(basicFunctions.sin(-1.571 + PI / 2))
-        println(basicFunctions.sin(-3.763099999999999 + PI / 2))
-        println(basicFunctions.sin(-1.9999999999995866 - periodNum * PERIOD))
-        println(basicFunctions.sin(0.0 - periodNum * PERIOD))
-        println(basicFunctions.sin(-1.571 - periodNum * PERIOD))
-        println(basicFunctions.sin(-3.763099999999999 - periodNum * PERIOD))
-        println(basicFunctions.sin(-1.9999999999995866 - periodNum * PERIOD + PI / 2))
-        println(basicFunctions.sin(0.0 - periodNum * PERIOD + PI / 2))
-        println(basicFunctions.sin(-1.571 - periodNum * PERIOD + PI / 2))
-        println(basicFunctions.sin(-3.763099999999999 - periodNum * PERIOD + PI / 2))
-
     }
 
     @Test
