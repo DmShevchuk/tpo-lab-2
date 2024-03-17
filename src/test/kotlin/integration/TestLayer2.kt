@@ -26,7 +26,7 @@ class TestLayer2 {
         mockLn()
     }
 
-    fun mockSin() {
+    private fun mockSin() {
         `when`(mock.sin(-78.4768766159879)).thenReturn(-0.06289817699065442)
         `when`(mock.sin(-78.4768766159879 + PI / 2)).thenReturn(-0.998019949365362)
         `when`(mock.sin(-5.771033540968432 + PI / 2)).thenReturn(0.8716920447060184)
@@ -160,7 +160,7 @@ class TestLayer2 {
         `when`(mock.sin(-4.7124 - PERIOD_NUM * PERIOD + PI / 2)).thenReturn(1.1019615487858221E-5)
     }
 
-    fun mockLn() {
+    private fun mockLn() {
         `when`(mock.ln(EPS)).thenReturn(-13.815510534473498);
         `when`(mock.ln(0.02)).thenReturn(-3.91202300542697);
         `when`(mock.ln(215.3380200004247)).thenReturn(5.372208979580273);
