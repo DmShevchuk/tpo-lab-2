@@ -7,7 +7,7 @@ import kotlin.math.pow
 
 class TestUtilities {
     companion object {
-        const val PRECISION = 1E-4
+        private const val PRECISION = 1E-4
 
         fun assertBigDouble(expected: Double, actual: Double) {
             Assertions.assertEquals(expected.getMantissa(), actual.getMantissa(), PRECISION)

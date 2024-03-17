@@ -1,6 +1,5 @@
 package functions
 
-import java.lang.IllegalArgumentException
 import kotlin.math.abs
 
 open class InitialFunctions {

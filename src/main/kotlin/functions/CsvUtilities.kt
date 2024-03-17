@@ -26,11 +26,11 @@ class Utilities(calculator: System) {
             PrintWriter(File("src/test/resources/sin.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${sin(x)}")
-                    val xWithPeriod = x + PI / 2;
+                    val xWithPeriod = x + PI / 2
                     writer.println("$xWithPeriod, ${sin(xWithPeriod)}")
-                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM;
+                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM
                     writer.println("$xWithPeriodNum, ${sin(xWithPeriodNum)}")
-                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2;
+                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2
                     writer.println("$xWithPeriodNumAndPeriod, ${sin(xWithPeriodNumAndPeriod)}")
                 }
             }
@@ -93,11 +93,11 @@ class Utilities(calculator: System) {
             PrintWriter(File("src/test/resources/cos.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${cos(x)}")
-                    val xWithPeriod = x + PERIOD;
+                    val xWithPeriod = x + PERIOD
                     writer.println("$xWithPeriod, ${cos(xWithPeriod)}")
-                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM;
+                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM
                     writer.println("$xWithPeriodNum, ${cos(xWithPeriodNum)}")
-                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2;
+                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2
                     writer.println("$xWithPeriodNumAndPeriod, ${cos(xWithPeriodNumAndPeriod)}")
                 }
             }
@@ -111,11 +111,11 @@ class Utilities(calculator: System) {
             PrintWriter(File("src/test/resources/tan.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${tan(x)}")
-                    val xWithPeriod = x + PERIOD;
+                    val xWithPeriod = x + PERIOD
                     writer.println("$xWithPeriod, ${tan(xWithPeriod)}")
-                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM;
+                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM
                     writer.println("$xWithPeriodNum, ${tan(xWithPeriodNum)}")
-                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2;
+                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2
                     writer.println("$xWithPeriodNumAndPeriod, ${tan(xWithPeriodNumAndPeriod)}")
                 }
             }
@@ -129,11 +129,11 @@ class Utilities(calculator: System) {
             PrintWriter(File("src/test/resources/cot.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${cot(x)}")
-                    val xWithPeriod = x + PERIOD;
+                    val xWithPeriod = x + PERIOD
                     writer.println("$xWithPeriod, ${cot(xWithPeriod)}")
-                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM;
+                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM
                     writer.println("$xWithPeriodNum, ${cot(xWithPeriodNum)}")
-                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2;
+                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2
                     writer.println("$xWithPeriodNumAndPeriod, ${cot(xWithPeriodNumAndPeriod)}")
                 }
             }
@@ -147,11 +147,11 @@ class Utilities(calculator: System) {
             PrintWriter(File("src/test/resources/sec.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${sec(x)}")
-                    val xWithPeriod = x + PERIOD;
+                    val xWithPeriod = x + PERIOD
                     writer.println("$xWithPeriod, ${sec(xWithPeriod)}")
-                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM;
+                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM
                     writer.println("$xWithPeriodNum, ${sec(xWithPeriodNum)}")
-                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2;
+                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2
                     writer.println("$xWithPeriodNumAndPeriod, ${sec(xWithPeriodNumAndPeriod)}")
                 }
             }
@@ -165,11 +165,11 @@ class Utilities(calculator: System) {
             PrintWriter(File("src/test/resources/csc.csv")).use { writer ->
                 for (x in xValues) {
                     writer.println("$x, ${csc(x)}")
-                    val xWithPeriod = x + PERIOD;
+                    val xWithPeriod = x + PERIOD
                     writer.println("$xWithPeriod, ${csc(xWithPeriod)}")
-                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM;
+                    val xWithPeriodNum = x - PERIOD * PERIOD_NUM
                     writer.println("$xWithPeriodNum, ${csc(xWithPeriodNum)}")
-                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2;
+                    val xWithPeriodNumAndPeriod = x - PERIOD * PERIOD_NUM + PI / 2
                     writer.println("$xWithPeriodNumAndPeriod, ${csc(xWithPeriodNumAndPeriod)}")
                 }
             }
@@ -228,7 +228,14 @@ fun main() {
     Utilities(System()).createCscCsv(lst)
 
 
-    val lstLog = listOf(2.0, 3.0, 10.0, 1e-6, 0.02, 215.3380200004247)
+    val lstLog = listOf(
+        2.0,
+        3.0,
+        10.0,
+        1e-6,
+        0.02,
+        215.3380200004247
+    )
 
     Utilities(System()).createLog10Csv(lstLog)
     Utilities(System()).createLnCsv(lstLog)
