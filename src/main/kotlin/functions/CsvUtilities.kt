@@ -5,7 +5,7 @@ import java.io.FileNotFoundException
 import java.io.PrintWriter
 import kotlin.math.PI
 
-class Utilities(private val calculator: System) {
+class Utilities(calculator: System) {
 
     private val log2 = calculator.f::log2
     private val log3 = calculator.f::log3
