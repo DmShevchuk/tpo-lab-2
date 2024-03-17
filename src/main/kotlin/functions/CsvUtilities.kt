@@ -3,11 +3,9 @@ package functions
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.PrintWriter
-import java.util.ArrayList
 import kotlin.math.PI
-import kotlin.math.abs
 
-class Utilities(private val calculator: FunctionCalculator) {
+class Utilities(private val calculator: System) {
 
     private val log2 = calculator.f::log2
     private val log3 = calculator.f::log3
@@ -222,19 +220,19 @@ fun main() {
         0.0
     )
 
-    Utilities(FunctionCalculator()).createSinCsv(lst)
-    Utilities(FunctionCalculator()).createCosCsv(lst)
-    Utilities(FunctionCalculator()).createTanCsv(lst)
-    Utilities(FunctionCalculator()).createCotCsv(lst)
-    Utilities(FunctionCalculator()).createSecCsv(lst)
-    Utilities(FunctionCalculator()).createCscCsv(lst)
+    Utilities(System()).createSinCsv(lst)
+    Utilities(System()).createCosCsv(lst)
+    Utilities(System()).createTanCsv(lst)
+    Utilities(System()).createCotCsv(lst)
+    Utilities(System()).createSecCsv(lst)
+    Utilities(System()).createCscCsv(lst)
 
 
     val lstLog = listOf(2.0, 3.0, 10.0, 1e-6, 0.02, 215.3380200004247)
 
-    Utilities(FunctionCalculator()).createLog10Csv(lstLog)
-    Utilities(FunctionCalculator()).createLnCsv(lstLog)
-    Utilities(FunctionCalculator()).createLog2Csv(lstLog)
-    Utilities(FunctionCalculator()).createLog3Csv(lstLog)
+    Utilities(System()).createLog10Csv(lstLog)
+    Utilities(System()).createLnCsv(lstLog)
+    Utilities(System()).createLog2Csv(lstLog)
+    Utilities(System()).createLog3Csv(lstLog)
 
 }

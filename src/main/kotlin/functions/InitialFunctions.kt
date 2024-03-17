@@ -3,7 +3,7 @@ package functions
 import java.lang.IllegalArgumentException
 import kotlin.math.abs
 
-open class BasicFunctions {
+open class InitialFunctions {
     private val PRECISION = 1E-12
 
     open fun sin(x: Double): Double {

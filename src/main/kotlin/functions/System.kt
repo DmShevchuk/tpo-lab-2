@@ -3,7 +3,7 @@ package functions
 import Functions
 import kotlin.math.pow
 
-open class FunctionCalculator(val f: Functions = Functions()) {
+open class System(val f: Functions = Functions()) {
     private val log2 = f::log2
     private val log3 = f::log3
     private val log10 = f::log10

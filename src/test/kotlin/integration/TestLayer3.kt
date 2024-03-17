@@ -1,7 +1,7 @@
 package integration
 
-import functions.BasicFunctions
-import functions.FunctionCalculator
+import functions.InitialFunctions
+import functions.System
 import integration.TestUtilities.Companion.assertBigDouble
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -9,14 +9,14 @@ import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TestLayer3 {
-    private lateinit var calculator: FunctionCalculator
+    private lateinit var calculator: System
     private val PERIOD = 2 * Math.PI
     private val EPS = 1e-6
 
     @BeforeAll
     fun init() {
-        calculator = FunctionCalculator()
-        val basicFunctions = BasicFunctions();
+        calculator = System()
+        val initialFunctions = InitialFunctions();
     }
 
     @Test
